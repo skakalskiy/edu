@@ -79,6 +79,14 @@ a {
   }
 }
 
+.arrow {
+  font-size: 30px;
+  position: absolute;
+  right: 5%;
+  top: 330%;
+  cursor: pointer;
+}
+
 @media(max-width: 1200px) {
   .container {
     padding-left: 5%;

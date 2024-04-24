@@ -9,8 +9,10 @@ import Contact from './components/Contact/Contact';
 import Search from './components/Search/Search';
 import Map from './components/Map/Map';
 import Footer from './components/Footer/Footer';
-import SubmitForm from './components/SubmitForm/SubmitForm';// Імпортуйте компонент SubmitForm
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import { Link } from 'react-scroll';
+
+import { IoIosArrowUp } from "react-icons/io";
 
 function App() {
 
@@ -26,6 +28,10 @@ function App() {
   const closeModal = () => {
     setCookie((prev) => !prev)
   } 
+
+  // const scrollTop = () => {
+  //   window.scrollTo(0,0)
+  // }
 
   return (
     <>
@@ -56,6 +62,11 @@ function App() {
           <Contact />
           <Map />
           <Footer />
+        </div>
+        <div className='arrow' > 
+           <Link  to='hero' smooth={true} offset={0} duration={500}>
+            <IoIosArrowUp/>
+           </Link>
         </div>
       </div>
     </>
