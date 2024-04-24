@@ -1,5 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 
 import './Contact.scss';
 
@@ -11,13 +12,14 @@ import white_arrow from '../../assets/white-arrow.png';
 
 function Contact() {
 
-    const [result, setResult] = React.useState("");
+    const [result, setResult] = useState("");
+    const [value, setValue] = useState()
 
   const onSubmit = async (event) => {
     event.preventDefault();
   setResult('Senden...');
 
-  setTimeout(() => {
+  setTimeout(() => {  
     window.location= '/submit'
   }, 3000);
    
@@ -41,6 +43,10 @@ function Contact() {
                 <label>Telefonnummer</label>
                 <input type="tel" name="phone" placeholder='Geben Sie Ihre Mobiltelefonnummer ein' required/>
                 <label>Schreiben Sie hier Ihre Nachrichten</label>
+                <PhoneInput
+                  placeholder="Telefonnummer eingeben"
+                  value={value}
+                  onChange={setValue}/>
                 <textarea name="message" rows="6" placeholder='Gib deine Nachricht ein' required></textarea>
                 <button type='submit' className='btn dark-btn'>Jetzt Absenden<img src={white_arrow} alt="white_arrow" /></button>
             </form>      
@@ -51,4 +57,4 @@ function Contact() {
   )
 }
 
-export default Contact;
+export default Contact; 

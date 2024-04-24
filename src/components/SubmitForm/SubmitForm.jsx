@@ -7,7 +7,7 @@ import enot from '../../assets/enot.mp4';
 const SubmitForm = () => {
   return (
     <div className='sb'>
-      <video src={enot} autoPlay ></video>
+      <video src={enot} autoPlay loop ></video>
     </div>
   )
 }
