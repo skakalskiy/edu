@@ -4,33 +4,34 @@ import Hero from './components/Hero/Hero';
 import Programs from './components/Programs/Programs';
 import Title from './components/Title/Title';
 import About from './components/About/About';
-import Campus from './components/Campus/Campus';
 import Testimonials from './components/Testimonials/Testimonials';
 import Contact from './components/Contact/Contact';
+import Search from './components/Search/Search';
+import Map from './components/Map/Map';
 import Footer from './components/Footer/Footer';
-
+import SubmitForm from './components/SubmitForm/SubmitForm';// Імпортуйте компонент SubmitForm
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+      <div className="App">
         <Navbar/>
         <Hero/>
         <div className='container'>
-          <Title subtitle='Our PROGRAM' title='What We Offer'/>
+          <Title subtitle='Vorteile' title='Was wir anbieten'/>
           <Programs/>
+          <Title subtitle='Suchen' title='Tippe um zu suchen'/>
+          <Search/>
           <About/>
-          <Title subtitle='Gallery' title='Campus Photo'/>
-          <Campus/>
-          <Title subtitle='TESTIMONIALS' title='What Student Says'/>
+          <Title subtitle='FAQ' title='Häufig gestellte Fragen'/>
           <Testimonials/>
-          <Title subtitle='Contact Us' title='Get in Touch'/>
+          <Title subtitle='KONTAKTIERE UNS' title='In Kontakt kommen'/>
           <Contact/>
-          <Footer/>
+          <Map/>
+          <Footer/>  
         </div>
-    </div>
+      </div>
   );
 }
 
 export default App;
-
-//1:10

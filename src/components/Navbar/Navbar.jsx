@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 import './Navbar.scss';
 
-import logo from '../../assets/logo.png';
+import { PiGitlabLogoFill } from "react-icons/pi";
 import menu_icon from '../../assets/menu-icon.png';
 
 const Navbar = () => {
@@ -24,14 +24,13 @@ const Navbar = () => {
 
   return (
     <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
-        <img src={logo} alt="logo" className='logo' />
+        <div className='logo'><PiGitlabLogoFill/></div>
         <ul className={mobileMenu ? '' : 'hide-mobile-menu'}>
-            <li><Link to='hero' smooth={true} offset={0} duration={500}>Home</Link></li>
-            <li><Link to='program' smooth={true} offset={-260} duration={500}>Program</Link></li>
-            <li><Link to='about' smooth={true} offset={-150} duration={500}>About us</Link></li>
-            <li><Link to='campus' smooth={true} offset={-260} duration={500}>Campus</Link></li>
-            <li><Link to='testimonials' smooth={true} offset={-260} duration={500}>Testimonials</Link></li>
-            <li><Link to='contact' smooth={true} offset={-260} duration={500} className='btn'>Contacts</Link></li>
+            <li><Link to='hero' smooth={true} offset={0} duration={500}>Blog</Link></li>
+            <li><Link to='program' smooth={true} offset={-260} duration={500}>Suchen</Link></li>
+            <li><Link to='about' smooth={true} offset={-150} duration={500}>Über uns</Link></li>
+            <li><Link to='testimonials' smooth={true} offset={-260} duration={500}>FAQ</Link></li>
+            <li><Link to='contact' smooth={true} offset={-260} duration={500} className='btn'>Kontakte</Link></li>
         </ul>
         <img src={menu_icon} alt="menu_icon" className='menu-icon' onClick={toggleMenu} />
     </nav> 

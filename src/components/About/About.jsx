@@ -2,8 +2,7 @@ import React from 'react';
 
 import './About.scss';
 
-import about_img from '../../assets/about.png';
-import play_icon from '../../assets/play-icon.png';
+import kons from '../../assets/kons.jpg'
 
 
 
@@ -11,15 +10,14 @@ const About = () => {
   return (
     <div className='about'>
         <div className="about-left">
-            <img src={about_img} alt="about_img" className='img' />
-            <img src={play_icon} alt="play_icon" className='play-icon' />
+            <img src={kons} alt="about_img" className='img' />
         </div>
         <div className="about-right">
-            <h3>ABOUT UNIVERSITY</h3>
-            <h2>Nurturing Tomrrow's Leaders Today</h2>
-            <p>Embark on a transformative educational journey with our university's comprehensive education programs. Our cutting-edge curriculum is designed to empower students with the knowledge, skills, and experiences needed to excel in the dynamic field of education.</p>
-            <p>With a focus on innovation, hands-on learning, and personalized mentorship, our programs prepare aspiring educators to make a meaningful impact in classrooms, schools, and communities.</p>
-            <p>Whether you aspire to become a teacher, administrator, counselor, or educational leader, our diverse range of programs offers the perfect pathway to achieve your goals and unlock your full potential in shaping the future of education.</p>
+            <h3>Über uns</h3>
+            <h2>Partnerschaft für Ihren Erfolg: Unser Engagement für Excellence</h2>
+            <p>Unser Unternehmen ist mehr als nur eine Unternehmensberatung. Wir sind Ihr strategischer Partner, der bereit ist, Ihr Wachstum und Ihren Erfolg zu fördern. Mit unserem fundierten Fachwissen und unserem tiefen Verständnis für Ihr Geschäft helfen wir Ihnen, Ihre Ziele durch die Entwicklung und Umsetzung effektiver Strategien zu erreichen.</p>
+            <p>Unser Ansatz besteht darin, eng mit Ihnen zusammenzuarbeiten, als Teil Ihres Teams. Wir glauben an Interaktion und gemeinsame Entscheidungsfindung, um optimale Ergebnisse zu erzielen. Unsere Berater sind bereit, Ihnen zuzuhören, Ihre Bedürfnisse zu berücksichtigen und innovative Lösungen vorzuschlagen.</p>
+            <p>Unser Ziel ist Ihr Erfolg. Wir arbeiten an jedem Projekt mit großer Aufmerksamkeit für Details und dem Wunsch, herausragende Ergebnisse zu erzielen. Wenn Sie sich an uns wenden, können Sie sicher sein, dass Sie einen personalisierten und qualitativ hochwertigen Ansatz zur Bewältigung Ihrer Aufgaben und zur Erreichung Ihrer Ziele erhalten.</p>
         </div>
     </div>
   )

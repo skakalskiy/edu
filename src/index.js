@@ -2,12 +2,36 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import SubmitForm from './components/SubmitForm/SubmitForm';
+
+
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App/>
+  },
+  {
+    path: "/submit",
+    element: <SubmitForm />,
+  },
+]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <RouterProvider router={router}>
     <App />
+    </RouterProvider>
+   
   </React.StrictMode>
 );
 
